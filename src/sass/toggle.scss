@@ -1,0 +1,65 @@
+.toggle {
+  position: absolute;
+  width: 35px;
+  height: 85px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  color: $pistachio;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: 2px solid;
+}
+
+.toggle__input {
+  position: absolute;
+  left: -9999px;
+}
+
+.toggle__input:checked + .toggle__box .toggle__handle {
+  transform: translateY(50px);
+}
+
+.toggle__input:checked + .toggle__box .toggle__train {
+  opacity: 0;
+}
+
+.toggle__input:checked + .toggle__box .toggle__play {
+  opacity: 1;
+}
+
+.toggle__handle {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 5px;
+  background-color: $orange;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: all $transition;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.toggle__train,
+.toggle__play {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  transition: opacity $transition;
+}
+
+.toggle__train {
+  bottom: 10px;
+  opacity: 1;
+}
+
+.toggle__play {
+  top: 10px;
+  opacity: 0;
+}
+

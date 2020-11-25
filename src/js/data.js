@@ -152,14 +152,14 @@ import eightSound from './../audio/numbers/eight.mp3';
 import nineSound from './../audio/numbers/nine.mp3';
 import zeroSound from './../audio/numbers/zero.mp3';
 //  toys
-import ballSound from './../audio/import/ball.mp3';
-import carSound from './../audio/import/car.mp3';
-import dollSound from './../audio/import/doll.mp3';
-import duckSound from './../audio/import/duck.mp3';
-import joystickSound from './../audio/import/joystick.mp3';
-import robotSound from './../audio/import/robot.mp3';
-import teddybearSound from './../audio/import/teddybear.mp3';
-import ufoSound from './../audio/import/ufo.mp3';
+import ballSound from './../audio/toys/ball.mp3';
+import carSound from './../audio/toys/car.mp3';
+import dollSound from './../audio/toys/doll.mp3';
+import duckSound from './../audio/toys/duck.mp3';
+import joystickSound from './../audio/toys/joystick.mp3';
+import robotSound from './../audio/toys/robot.mp3';
+import teddybearSound from './../audio/toys/teddybear.mp3';
+import ufoSound from './../audio/toys/ufo.mp3';
 
 const dataArray = [
   {

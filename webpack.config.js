@@ -17,7 +17,7 @@ module.exports = (env, options) => {
     output: {
       filename: 'main.js',
       path: path.join(__dirname, '/build'),
-      publicPath: ASSET_PATH,
+      publicPath: ASSET_PATH
     },
 
     module: {
@@ -28,38 +28,38 @@ module.exports = (env, options) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                publicPath: './',
-              },
+                publicPath: './'
+              }
             },
             'css-loader',
-            'sass-loader',
-          ],
+            'sass-loader'
+          ]
         },
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: ['babel-loader', 'eslint-loader'],
+          use: ['babel-loader', 'eslint-loader']
         },
         {
           test: /\.(png|svg|jpe?g|gif|wav|ico|mp3)$/i,
-          use: 'file-loader',
+          use: 'file-loader'
         },
         {
           test: /\.html$/i,
-          loader: 'html-loader',
-        },
-      ],
+          loader: 'html-loader'
+        }
+      ]
     },
 
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './src/index.html'
       }),
       new MiniCssExtractPlugin({
-        filename: 'style.css',
-      }),
-    ],
+        filename: 'style.css'
+      })
+    ]
   };
 
   return config;

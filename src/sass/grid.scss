@@ -1,0 +1,110 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, 300px));
+  justify-content: center;
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 20px 0;
+}
+
+.grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  color: $white;
+  border-radius: 17px;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.8);
+  text-transform: capitalize;
+
+  img {
+    height: 180px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.categories__item {
+  position: relative;
+  transition: all $transition;
+}
+
+.categories__item:hover {
+  transform: scale(1.03);
+}
+
+.grid__name {
+  line-height: 1;
+  font-weight: 600;
+}
+
+.categories__name {
+  font-size: 2.8em;
+}
+///////////////////
+
+.cards__item {
+  height: 240px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.cards__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flipped .cards__inner {
+  transform: rotateY(180deg);
+}
+
+.cards__front,
+.cards__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: $white;
+  transition: transform 0.7s;
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: auto;
+  }
+}
+
+.cards__back {
+  transform: rotateY(180deg);
+}
+
+.cards__name {
+  font-size: 2.5em;
+  color: $black;
+}
+
+.cards__flip,
+.cards__voice {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-position: center;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
+.cards__flip {
+  right: 10px;
+  background-image: url("./../icons/flip.svg");
+}
+
+.cards__voice {
+  left: 10px;
+  background-image: url("./../icons/voice.svg");
+}
