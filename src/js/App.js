@@ -6,7 +6,9 @@ import { data } from './data';
 import { elements } from './dom';
 import { root } from './root';
 import { createStats } from './statistics';
-import { show } from './utils';
+import { show, sortAlphabet } from './utils';
+
+const MAX_WORDS_NUMBER = 8;
 
 export default class App {
   init() {
@@ -41,18 +43,23 @@ export default class App {
     return fragment;
   }
 
-  onStatsStudyClick() {
-    root.hardstudy = true;
+  getDifficultWords() {
     const result = [];
-
     for (let i = 0; i < localStorage.length; i += 1) {
       if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
-        const storageObj = JSON.parse(localStorage.getItem(localStorage.key(i)));
-        if (storageObj.percent < 75 && storageObj.percent > 0) {
-          result.push(data.find(categoryObj => categoryObj.name === storageObj.category).cards
-            .find(cardObj => cardObj.name === storageObj.word));
-        }
+        result.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
       }
+    }
+    return sortAlphabet(result, 'percent').filter(obj => obj.percent > 0 && obj.percent < 100).slice(0, MAX_WORDS_NUMBER);
+  }
+
+  onStatsStudyClick() {
+    root.hardstudy = true;
+    const difficultWords = this.getDifficultWords();
+    const result = [];
+    for (let i = 0; i < difficultWords.length; i += 1) {
+      result.push(data.find(categoryObj => categoryObj.name === difficultWords[i].category).cards
+        .find(cardObj => cardObj.name === difficultWords[i].word));
     }
 
     root.array = result;

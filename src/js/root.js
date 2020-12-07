@@ -1,7 +1,6 @@
 import wonSound from './../audio/effects/won.wav';
 import loseSound from './../audio/effects/lose.wav';
-
-import { hide, show } from './utils';
+import { hide, show, shuffleArray } from './utils';
 import { elements } from './dom';
 import { createStats } from './statistics';
 
@@ -55,6 +54,8 @@ const root = {
     hide(elements.toggle.parentElement, elements.start);
     // показываем шкалу и повтор
     show(elements.repeat, elements.starsbox);
+    //  shuffle array
+    shuffleArray(this.array);
     // проигрываем первую карточку
     this.getCurrentCard();
   },

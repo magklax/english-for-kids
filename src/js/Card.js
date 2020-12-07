@@ -37,7 +37,7 @@ export default class Card {
       evt.preventDefault();
       const obj = JSON.parse(localStorage.getItem(this.name));
 
-      if (!root.play && evt.target !== flip) {
+      if (!root.play && evt.target !== flip && !cardElement.classList.contains('flipped')) {
         root.playAudio(this.sound);
         // обновляем статистику
         obj.trained += 1;
