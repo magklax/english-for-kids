@@ -161,57 +161,57 @@ import robotSound from './../audio/toys/robot.mp3';
 import teddybearSound from './../audio/toys/teddybear.mp3';
 import ufoSound from './../audio/toys/ufo.mp3';
 
-const dataArray = [
+const data = [
   {
     src: animals,
-    name: 'Animals',
-    color: '#F94144',
+    name: 'animals',
+    color: '#ef233c',
     cards: [
       {
         src: alligator,
-        name: 'Alligator',
+        name: 'alligator',
         translation: 'Аллигатор',
         sound: alligatorSound
       },
       {
         src: cat,
-        name: 'Cat',
+        name: 'cat',
         translation: 'Кот',
         sound: catSound
       },
       {
         src: dog,
-        name: 'Dog',
+        name: 'dog',
         translation: 'Собака',
         sound: dogSound
       },
       {
         src: elephant,
-        name: 'Elephant',
+        name: 'elephant',
         translation: 'Слон',
         sound: elephantSound
       },
       {
         src: lion,
-        name: 'Lion',
+        name: 'lion',
         translation: 'Лев',
         sound: lionSound
       },
       {
         src: monkey,
-        name: 'Monkey',
+        name: 'monkey',
         translation: 'Обезьяна',
         sound: monkeySound
       },
       {
         src: raccoon,
-        name: 'Raccoon',
+        name: 'raccoon',
         translation: 'Енот',
         sound: raccoonSound
       },
       {
         src: turtle,
-        name: 'Turtle',
+        name: 'turtle',
         translation: 'Черепаха',
         sound: turtleSound
       }
@@ -219,7 +219,7 @@ const dataArray = [
   },
   {
     src: clothes,
-    name: 'Clothes',
+    name: 'clothes',
     color: '#F3722C',
     cards: [
       {
@@ -272,7 +272,7 @@ const dataArray = [
       },
       {
         src: tshirt,
-        name: 'T-Shirt',
+        name: 't-Shirt',
         translation: 'Футболка',
         sound: tshirtSound
       }
@@ -280,54 +280,54 @@ const dataArray = [
   },
   {
     src: colors,
-    name: 'Colors',
+    name: 'colors',
     color: '#ffb703',
     cards: [
       {
         src: black,
-        name: 'Black',
+        name: 'black',
         translation: 'Черный',
         sound: blackSound
       },
       {
         src: blue,
-        name: 'Blue',
+        name: 'blue',
         translation: 'Голубой',
         sound: blueSound
       },
       {
         src: green,
-        name: 'Green',
+        name: 'green',
         translation: 'Зеленый',
         sound: greenSound
       },
       {
         src: orange,
-        name: 'Orange',
+        name: 'orange',
         translation: 'Оранжевый',
         sound: orangeSound
       },
       {
         src: pink,
-        name: 'Pink',
+        name: 'pink',
         translation: 'Розовый',
         sound: pinkSound
       },
       {
         src: purple,
-        name: 'Purple',
+        name: 'purple',
         translation: 'Фиолетовый',
         sound: purpleSound
       },
       {
         src: red,
-        name: 'Red',
+        name: 'red',
         translation: 'Красный',
         sound: redSound
       },
       {
         src: yellow,
-        name: 'Yellow',
+        name: 'yellow',
         translation: 'Желтый',
         sound: yellowSound
       }
@@ -335,7 +335,7 @@ const dataArray = [
   },
   {
     src: emotions,
-    name: 'Emotions',
+    name: 'emotions',
     color: '#8ac926',
     cards: [
       {
@@ -390,42 +390,42 @@ const dataArray = [
   },
   {
     src: family,
-    name: 'Family',
-    color: '#00b4d8',
+    name: 'family',
+    color: '#07a9af',
     cards: [
       {
         src: father,
-        name: 'Father',
+        name: 'father',
         translation: 'Папа',
         sound: fatherSound
       },
       {
         src: mother,
-        name: 'Mother',
+        name: 'mother',
         translation: 'Мама',
         sound: motherSound
       },
       {
         src: grandfather,
-        name: 'Grandfather',
+        name: 'grandfather',
         translation: 'Дедушка',
         sound: grandfatherSound
       },
       {
         src: grandmother,
-        name: 'Grandmother',
+        name: 'grandmother',
         translation: 'Бабушка',
         sound: grandmotherSound
       },
       {
         src: brother,
-        name: 'Brother',
+        name: 'brother',
         translation: 'Брат',
         sound: brotherSound
       },
       {
         src: sister,
-        name: 'Sister',
+        name: 'sister',
         translation: 'Сестра',
         sound: sisterSound
       },
@@ -445,8 +445,8 @@ const dataArray = [
   },
   {
     src: fruits,
-    name: 'Fruits',
-    color: '#9b5de5',
+    name: 'fruits',
+    color: '#ef233c',
     cards: [
       {
         src: apple,
@@ -500,18 +500,18 @@ const dataArray = [
   },
   {
     src: numbers,
-    name: 'Numbers',
-    color: '#F94144',
+    name: 'numbers',
+    color: '#F3722C',
     cards: [
       {
         src: one,
-        name: 'One',
+        name: 'one',
         translation: 'Один',
         sound: oneSound
       },
       {
         src: two,
-        name: 'Two',
+        name: 'two',
         translation: 'Два',
         sound: twoSound
       },
@@ -567,8 +567,8 @@ const dataArray = [
   },
   {
     src: toys,
-    name: 'Toys',
-    color: '#F3722C',
+    name: 'toys',
+    color: '#ffb703',
     cards: [
       {
         src: ball,
@@ -608,7 +608,7 @@ const dataArray = [
       },
       {
         src: teddybear,
-        name: 'Teddy Bear',
+        name: 'teddy bear',
         translation: 'Мишка Тедди',
         sound: teddybearSound
       },
@@ -622,4 +622,4 @@ const dataArray = [
   }
 ];
 
-export { dataArray };
+export { data };

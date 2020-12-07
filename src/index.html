@@ -29,16 +29,32 @@
       </a>
     </header>
     <main>
-      <div class="toggle">
-        <input class="toggle__input" id="toggle-input" type="checkbox">
-        <label class="toggle__box" for="toggle-input">
-          <span class="toggle__handle"></span>
-          <span class="toggle__train">Tr</span>
-          <span class="toggle__play">Pl</span>
-        </label>
+      <div class="button-box">
+        <div class="toggle">
+          <input class="toggle__input" id="toggle-input" type="checkbox" autocomplete="off" checked>
+          <label class="toggle__box" for="toggle-input" >
+            <span class="toggle__handle"></span>
+            <span class="toggle__play">Play</span>
+            <span class="toggle__train">Train</span>
+          </label>
+        </div>
+        <button id="statistics-toggle-button" class="statistics-button" type="button" aria-label="statistics-toggle" title="Open/Close Statistics"></button>
+        <button id="statistics-delete-button" class="statistics-button visually-hidden" type="button" aria-label="statistics-delete" title="Reset Statistics"></button>
+        <button id="statistics-study-button" class="statistics-button visually-hidden" type="button" aria-label="statistics-study" title="Study Difficult Words"></button>
+        <button id="start-button" class="start-button visually-hidden" type="button" aria-label="start" title="Start Game"></button>
+        <button id="repeat-button" class="repeat-button visually-hidden" type="button" aria-label="repeat" title="Repeat The Word"></button>
       </div>
+      <div id="stars-box" class="stars-box visually-hidden"></div>
       <div id="categories" class="grid"></div>
-      <div id="cards" class="grid"></div>
+      <div id="cards" class="grid visually-hidden"></div>
+      <div id="statistics" class="statistics visually-hidden">
+        <h2 class="statistics__title title">Statistics</h2>
+        <div class="statistics__box">
+          <table class="statistics__table">
+            <tbody id="statistics-body"></tbody>
+          </table>
+        </div>
+      </div>
     </main>
   </div>
   <footer class="footer">
@@ -49,6 +65,12 @@
     <span> by </span>
     <img src="./icons/rs.svg" alt="The Rolling Scopes Logo" width="50" height="50">
   </footer>
+  <div id="gameover" class="gameover visually-hidden">
+    <div id="gameover-box">
+      <h3 class="gameover__title title"></h3>
+      <div class="gameover__text"></div>
+    </div>
+  </div>
   <template id="category-menu-template">
     <li class="nav__item">
       <a class="nav__link" href="#">
@@ -59,7 +81,7 @@
   </template>
   <template id="category-main-template">
     <a href="#" class="grid__item categories__item">
-      <img src="./images/categories/animals.png" alt="Animals" width="180" height="180">
+      <img src="./images/categories/animals.png" alt="Animals" width="150" height="150">
       <span class="categories__name grid__name">Animals</span>
     </a>
   </template>
@@ -68,13 +90,16 @@
       <div class="cards__inner">
         <div class="cards__front grid__item">
           <img src="./images/animals/turtle.png" alt="Turtle">
-          <span class="cards__name grid__name cards__name--en">Turtle</span>
-          <button class="cards__flip" type="button"></button>
-          <button class="cards__voice" type="button"></button>
+          <div class="cards__footer">
+            <span class="cards__name grid__name cards__name--en">Turtle</span>
+            <button class="cards__flip" type="button"></button>
+          </div>
         </div>
         <div class="cards__back grid__item">
           <img src="./images/animals/turtle.png" alt="Turtle">
-          <span class="cards__name grid__name cards__name--ru">Черепаха</span>
+          <div class="cards__footer">
+            <span class="cards__name grid__name cards__name--ru">Черепаха</span>
+          </div>
         </div>
       </div>
     </a>

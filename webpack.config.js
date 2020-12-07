@@ -50,7 +50,6 @@ module.exports = (env, options) => {
         }
       ]
     },
-
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({

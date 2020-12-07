@@ -1,44 +1,44 @@
 .visually-hidden {
-	position: absolute !important;
+	position: absolute;
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important;
-	width: 1px !important;
+	padding:0;
+	border:0;
+	height: 1px;
+	width: 1px;
 	overflow: hidden;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	min-width: 320px;
+	min-height: 100vh;
 	font-size: 12px;
 	line-height: 1.3;
 	font-family: $Nunito;
 	color: $black;
-	background-color: $white;
+	background-image: url("./../images/bg.png");
+	background-repeat: repeat-x;
+	background-color: #d8bbff;
+	transition: $transition;
 
 	&.blocked {
 		overflow: hidden;
 	}
 }
 
-.overlay {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba($black, 0.5);
-	opacity: 0;
-	transition: $transition;
-}
-
-.blocked .overlay {
-	opacity: 1;
-	z-index: 89;
+.played {
+	background-color: $peach;
 }
 
 .container {
 	padding: 0 4.6%;
-	margin: 0 auto;
+}
+
+main {
+	padding-bottom: 30px;
 }
 
 .title {

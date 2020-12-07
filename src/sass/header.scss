@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  margin-bottom: 50px;
   text-align: center;
   z-index: 99;
   transition: opacity $transition;
@@ -11,9 +12,10 @@
 
 .header__title {
   font-family: $Pacifico;
-  font-size: 1.8em;
+  font-size: 22px;
   font-weight: 400;
   color: $black;
+  text-transform: capitalize;
 }
 
 .nav__toggle {
@@ -110,4 +112,10 @@
 
 .nav__name {
   margin-left: 10px;
+}
+
+@media(min-width: $min-tablet) {
+  .header__title {
+    font-size: 32px;
+  }
 }

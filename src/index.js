@@ -1,4 +1,11 @@
+import './js/dom';
 import './js/data';
+import './js/create';
+import './js/utils';
+import './js/root';
+import './js/statistics';
 import './js/burger';
-import './js/categories';
-import './js/cards';
+import './js/Category';
+import './js/Card';
+import './js/App';
+import './js/init';
