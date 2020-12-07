@@ -4,6 +4,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, options) => {
   const isProduction = options.mode === 'production';
@@ -19,7 +20,6 @@ module.exports = (env, options) => {
       path: path.join(__dirname, '/build'),
       publicPath: ASSET_PATH
     },
-
     module: {
       rules: [
         {
@@ -41,7 +41,7 @@ module.exports = (env, options) => {
           use: ['babel-loader', 'eslint-loader']
         },
         {
-          test: /\.(png|svg|jpe?g|gif|wav|ico|mp3)$/i,
+          test: /\.(png|svg|jpe?g|gif|wav|ico|mp3|woff2?)$/i,
           use: 'file-loader'
         },
         {
@@ -57,6 +57,12 @@ module.exports = (env, options) => {
       }),
       new MiniCssExtractPlugin({
         filename: 'style.css'
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: `./src/favicon.ico`, to: 'favicon.ico' },
+          { from: `./src/fonts/`, to: 'fonts' }
+        ]
       })
     ]
   };
