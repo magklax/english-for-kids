@@ -6,7 +6,6 @@
   padding: 15px 0;
   margin-bottom: 50px;
   text-align: center;
-  z-index: 99;
   transition: opacity $transition;
 }
 
@@ -91,6 +90,10 @@
 
 .nav__item {
   max-width: 320px;
+
+  &.current {
+    filter: grayscale(90%);
+  }
 }
 
 .nav__link {

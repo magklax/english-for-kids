@@ -21,6 +21,7 @@ export default class App {
     elements.statstoggle.addEventListener('click', root.onStatsToggleClick.bind(root));
     elements.statsdelete.addEventListener('click', root.onStatsDeleteClick.bind(root));
     elements.statsstudy.addEventListener('click', this.onStatsStudyClick.bind(this));
+    elements.navitems = document.querySelectorAll('.nav__item');
   }
 
   createMainCategories() {

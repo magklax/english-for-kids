@@ -18,13 +18,15 @@ export default class Category {
     hide(elements.categories);
     elements.title.textContent = this.name;
     root.array = this.cards;
+    [].forEach.call(elements.navitems, item => item.classList.remove('current'));
+    document.querySelector(`#${this.name}`).classList.add('current');
     this.createCards();
   }
 
   renderMenuCategory() {
     const categoryElement = templates.menu.cloneNode(true);
-
     categoryElement.style.backgroundColor = this.color;
+    categoryElement.setAttribute('id', this.name);
     categoryElement.querySelector('img').src = this.src;
     categoryElement.querySelector('img').alt = this.name;
     categoryElement.querySelector('.nav__name').textContent = this.name;
