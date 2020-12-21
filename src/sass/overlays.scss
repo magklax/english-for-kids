@@ -1,0 +1,61 @@
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+	z-index: -1;
+}
+
+.overlay--burger {
+  background-color: rgba($black, 0.5);
+	opacity: 1;
+  z-index: 89;
+	transition: $transition;
+}
+
+.overlay--gameover {
+  background-color: $white;
+	opacity: 1;
+	z-index: 199;
+}
+
+.gameover {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  z-index: 299;
+}
+
+.gameover__box--win,
+.gameover__box--lose {
+  height: 700px;
+  padding: 50px;
+  box-sizing: border-box;
+  font-size: 22px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center 230px;
+}
+
+.gameover__box--win {
+  background-image: url("./../images/wingame-bg.png");
+}
+
+.gameover__box--lose {
+  background-image: url("./../images/losegame-bg.png");
+}
+
+.gameover__title {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: $pink;
+  font-family: $Pacifico;
+}
+
+.gameover__text {
+  margin-bottom: 15px;
+}

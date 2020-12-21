@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <title>English for Kids</title>
+</head>
+<body>
+  <div id="overlay" class="overlay"></div>
+  <div class="container">
+    <header class="header">
+      <nav>
+        <button id="burger" class="nav__toggle" type="button">
+          <span></span>
+        </button>
+        <ul id="menu" class="nav__menu"></ul>
+      </nav>
+      <h1 class="header__title title">English for Kids</h1>
+      </a>
+      <a href="index.html" class="header__logo">
+        <img src="./icons/logo.svg" alt="logo" width="50" height="50">
+      </a>
+    </header>
+    <main>
+      <div class="button-box">
+        <div class="toggle">
+          <input class="toggle__input" id="toggle-input" type="checkbox" autocomplete="off" checked>
+          <label class="toggle__box" for="toggle-input" >
+            <span class="toggle__handle"></span>
+            <span class="toggle__play">Play</span>
+            <span class="toggle__train">Train</span>
+          </label>
+        </div>
+        <button id="statistics-toggle-button" class="statistics-button" type="button" aria-label="statistics-toggle" title="Open/Close Statistics"></button>
+        <button id="statistics-delete-button" class="statistics-button visually-hidden" type="button" aria-label="statistics-delete" title="Reset Statistics"></button>
+        <button id="statistics-study-button" class="statistics-button visually-hidden" type="button" aria-label="statistics-study" title="Study Difficult Words"></button>
+        <button id="start-button" class="start-button visually-hidden" type="button" aria-label="start" title="Start Game"></button>
+        <button id="repeat-button" class="repeat-button visually-hidden" type="button" aria-label="repeat" title="Repeat The Word"></button>
+      </div>
+      <div id="stars-box" class="stars-box visually-hidden"></div>
+      <div id="categories" class="grid"></div>
+      <div id="cards" class="grid visually-hidden"></div>
+      <div id="statistics" class="statistics visually-hidden">
+        <h2 class="statistics__title title">Statistics</h2>
+        <div class="statistics__box">
+          <table class="statistics__table">
+            <tbody id="statistics-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    <span> © 2020 </span>
+    <a href="https://github.com/magklax">Nadia Prokopyeva</a>
+    <span>for </span>
+    <a href="https://rs.school/js/">«JavaScript/Front-end»</a>
+    <span> by </span>
+    <img src="./icons/rs.svg" alt="The Rolling Scopes Logo" width="50" height="50">
+  </footer>
+  <div id="gameover" class="gameover visually-hidden">
+    <div id="gameover-box">
+      <h3 class="gameover__title title"></h3>
+      <div class="gameover__text"></div>
+    </div>
+  </div>
+  <template id="category-menu-template">
+    <li class="nav__item">
+      <a class="nav__link" href="#">
+        <img src="./images/categories/animals.png" alt="Animals" width="50" height="50">
+        <span class="nav__name">Animals</span>
+      </a>
+    </li>
+  </template>
+  <template id="category-main-template">
+    <a href="#" class="grid__item categories__item">
+      <img src="./images/categories/animals.png" alt="Animals" width="150" height="150">
+      <span class="categories__name grid__name">Animals</span>
+    </a>
+  </template>
+  <template id="card-template">
+    <a href="#" class="cards__item">
+      <div class="cards__inner">
+        <div class="cards__front grid__item">
+          <img src="./images/animals/turtle.png" alt="Turtle">
+          <div class="cards__footer">
+            <span class="cards__name grid__name cards__name--en">Turtle</span>
+            <button class="cards__flip" type="button"></button>
+          </div>
+        </div>
+        <div class="cards__back grid__item">
+          <img src="./images/animals/turtle.png" alt="Turtle">
+          <div class="cards__footer">
+            <span class="cards__name grid__name cards__name--ru">Черепаха</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </template>
+</body>
+</html>

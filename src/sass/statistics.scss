@@ -1,0 +1,45 @@
+.statistics {
+  text-align: center;
+}
+
+.statistics__title {
+  margin-bottom: 15px;
+  font-family: $Pacifico;
+  font-weight: 400;
+  font-size: 24px;
+  color: $pink;
+}
+
+.statistics__box {
+  overflow-x: auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+  }
+
+  tr:nth-child(2n + 1) {
+    background-color: rgba($white, .3);
+  }
+
+  th {
+    padding: 8px;
+    //border-bottom: 4px solid $pink;
+    background-color: rgba($orange, .5);
+    cursor: pointer;
+  }
+
+  td {
+    padding: 8px;
+  }
+}
+
+@media(min-width: $min-tablet) {
+  .statistics__title {
+    font-size: 32px;
+  }
+  .statistics__box {
+    font-size: 14px;
+  }
+}

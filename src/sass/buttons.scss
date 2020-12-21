@@ -1,0 +1,89 @@
+.button-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+}
+
+.start-button,
+.repeat-button {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: top 0.8s ease-in-out;
+	animation-name: pulse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+	transition: left $transition;
+	z-index: 99;
+
+	&:hover {
+		animation-play-state: running;
+	}
+}
+
+.played .start-button,
+.played .repeat-button {
+	display: block;
+}
+
+.start-button {
+	background-image: url("./../icons/start.png");
+}
+
+.repeat-button {
+	background-image: url("./../icons/repeat.png");
+}
+
+.stars-box {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 16px);
+	column-gap: 5px;
+	align-items: end;
+	justify-items: end;
+	width: 290px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+.statistics-button {
+	width: 46px;
+	height: 46px;
+	margin-right: 20px;
+	background-color: transparent;
+	background-size: 25px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 3px solid $pink;
+	border-radius: 100%;
+	transition: all $transition;
+
+	&:hover {
+		border-color: $orange;
+		transform: scale(1.1);
+	}
+
+	&:nth-of-type(1) {
+		background-image: url("./../icons/stats.svg");
+
+		&.opened{
+			background-image: url("./../icons/close.svg");
+		}
+	}
+
+	&:nth-of-type(2) {
+		background-image: url("./../icons/garbage.svg");
+	}
+
+	&:nth-of-type(3) {
+		background-image: url("./../icons/study.svg");
+	}
+}
