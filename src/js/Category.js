@@ -18,7 +18,7 @@ export default class Category {
     hide(elements.categories);
     elements.title.textContent = this.name;
     root.array = this.cards;
-    [].forEach.call(elements.navitems, item => item.classList.remove('current'));
+    Array.prototype.forEach.call(elements.navitems, item => item.classList.remove('current'));
     document.querySelector(`#${this.name}`).classList.add('current');
     this.createCards();
   }

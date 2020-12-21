@@ -9,6 +9,7 @@ import { createStats } from './statistics';
 import { show, sortAlphabet } from './utils';
 
 const MAX_WORDS_NUMBER = 8;
+const WEBPACK_KEY = 'loglevel:webpack-dev-server';
 
 export default class App {
   init() {
@@ -27,9 +28,9 @@ export default class App {
   createMainCategories() {
     const fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < data.length; i += 1) {
-      fragment.appendChild(new Category(data[i]).renderMainCategory());
-    }
+    data.forEach((elem) => {
+      fragment.appendChild(new Category(elem).renderMainCategory());
+    });
 
     return fragment;
   }
@@ -37,9 +38,9 @@ export default class App {
   createMenuCategories() {
     const fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < data.length; i += 1) {
-      fragment.appendChild(new Category(data[i]).renderMenuCategory());
-    }
+    data.forEach((elem) => {
+      fragment.appendChild(new Category(elem).renderMenuCategory());
+    });
 
     return fragment;
   }
@@ -47,7 +48,7 @@ export default class App {
   getDifficultWords() {
     const result = [];
     for (let i = 0; i < localStorage.length; i += 1) {
-      if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
+      if (localStorage.key(i) !== WEBPACK_KEY) {
         result.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
       }
     }
